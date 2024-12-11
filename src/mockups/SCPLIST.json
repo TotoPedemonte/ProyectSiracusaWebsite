@@ -1,0 +1,24 @@
+{
+    "accountId": 28739,
+    "serverId": 79921,
+    "ip": "45.235.98.218",
+    "port": 25960,
+    "online": true,
+    "version": "13.5.1",
+    "friendlyFire": true,
+    "modded": true,
+    "whitelist": false,
+    "isoCode": "AR",
+    "players": "0/40",
+    "info": "<b>[<span style=\"color:#6cace4ff\">ARG</span>]   <span style=\"color:#FFFFFF\">P</span><span style=\"color:#EAF4FC\">r</span><span style=\"color:#D5E9F9\">o</span><span style=\"color:#C0DEF6\">j</span><span style=\"color:#ABD3F3\">e</span><span style=\"color:#96C8F0\">c</span><span style=\"color:#81BDED\">t</span> <span style=\"color:#6CACE4\">S</span><span style=\"color:#7EB6E7\">i</span><span style=\"color:#90C0EA\">r</span><span style=\"color:#A2CAED\">a</span><span style=\"color:#B4D4F0\">c</span><span style=\"color:#C6DEF3\">u</span><span style=\"color:#D8E8F6\">s</span><span style=\"color:#EAF2F9\">a</span>  | <span style=\"color:#EB6122\">1.4.0</span></b>",
+    "techList": [
+      {
+        "id": 441862323,
+        "name": "EXILED",
+        "version": "8.14.0"
+      }
+    ],
+    "pastebin": "VqtscWVz",
+    "official": 0,
+    "distance": 209.4022
+}

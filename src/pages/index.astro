@@ -1,11 +1,176 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import AboutCard from "../components/AboutCard.astro";
+import video from "../assets/bgvideo.mp4";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Project Siracusa">
+	<Header />
+	<main class="overflow-x-hidden">
+		<section class="relative h-screen w-screen flex items-center flex-col shadow-2xl">
+			<section class="mx-0 my-auto text-center">
+				<h1 class="text-8xl mb-4 font-extralight">Project Siracusa</h1>
+				<h3 class="text-3xl">
+					El #2 mejor servidor de <span class="text-cyan-400"
+						>Argentina</span>
+				</h3>
+				<ul class="flex gap-16 justify-center mt-8 welcome-buttons">
+					<li class="border-white border rounded-xl py-1 px-4 text-lg backdrop-blur-2xl hover:cursor-pointer">
+						<a href="https://discord.gg/projectsiracusa" class="flex items-center gap-2" target="_blank">
+							<svg width="24px" height="24px" viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#ffffff" fill-rule="nonzero"> </path> </g> </g></svg>
+							<span>Discord Oficial</span>
+						</a>
+					</li>
+					<li class="border-white border rounded-xl py-1 px-4 text-lg backdrop-blur-2xl hover:cursor-pointer">
+						<a href="/dashboard" class="flex items-center gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-server"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M7 8l0 .01" /><path d="M7 16l0 .01" /></svg>
+							Panel del Servidor
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<section class="absolute w-full h-full top-0 -z-30">
+				<div
+					class="absolute h-full w-full bg-black opacity-60 bg-gradient-to-br"
+				>
+				</div>
+				<video
+					class="h-screen w-full object-cover"
+					autoplay
+					loop
+					muted
+					playsinline
+				>
+					<source src={video} />
+				</video>
+			</section>
+		</section>
+
+		<section class="min-h-screen shadow-xl flex flex-col items-center shadow-white">
+			<h2 class="text-5xl text-center py-10 underline underline-offset-8">Acerca de Nosotros</h2>
+			<div class="boxes max-w-screen-2xl w-full mx-auto px-12 my-12 flex flex-col gap-8">
+				<div id="grid-1" class="grid responsive-grid gap-8">
+					<AboutCard title="Staff Activo" description="Project Siracusa cuenta con un staff dedicado a responder las 24 horas del día a tus dudas y reportes. Nos enforcamos en que el usuario tenga una experiencia placentera a lo largo de su estadía!">
+						<svg class="my-2" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-star"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h.5" /><path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" /></svg>
+					</AboutCard>
+					<AboutCard title="Servidores Activos" description="Poseemos servidores de excelente calidad el cual permanece activo 24/7. El host se encuentra en Argentina, pero a bajo ping para países cercanos.">
+						<svg class="my-2" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-server"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M7 8l0 .01" /><path d="M7 16l0 .01" /></svg>
+					</AboutCard>
+					<AboutCard title="Comunidad Activa" description="En Discord contamos con +600 users activos y una comunidad la cual te hará sentirte como en una verdadera familia!" >
+						<svg class="my-2" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users-group"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" /><path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M17 10h2a2 2 0 0 1 2 2v1" /><path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M3 13v-1a2 2 0 0 1 2 -2h2" /></svg>
+					</AboutCard>
+				</div>
+
+				<div class="grid responsive-grid gap-8 justify-items-center">
+					<AboutCard title="Plugins Personalizados" description="Por supuesto contamos con modificaciones en el servidor y tenemos un equipo dedicado a esta tarea. Este equipo se encarga de la creacion, configuracion y manenimiento de los plugins y/o modificaciones.">
+						<svg class="my-2" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+					</AboutCard>
+					<AboutCard title="Servidor Unico" description="Somos una Comunidad con Estilo Ítalo-americano que contamos con servidores de SCP:Sl y Minecraft.">
+						<svg class="my-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256">
+							<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M18.98242,2.99023c-0.495,0 -0.91723,0.36156 -0.99023,0.85156l-0.5957,3.98047l-0.02148,0.00977c-7.719,3.122 -12.70703,10.52166 -12.70703,18.84766c0,1.559 0.18202,3.1252 0.54102,4.6582l0.00586,0.01953l-2.90625,2.78711c-0.357,0.343 -0.411,0.89583 -0.125,1.29883l6.95117,9.82617c0.286,0.404 0.82358,0.54241 1.26758,0.31641l3.5957,-1.81445l0.01953,0.01172c3.28,2.111 7.07937,3.22852 10.98438,3.22852c3.907,0 7.70437,-1.11652 10.98438,-3.22852l0.01953,-0.00977l3.5957,1.8125c0.444,0.224 0.97863,0.08759 1.26563,-0.31641l6.95117,-9.82617c0.285,-0.405 0.23105,-0.95683 -0.12695,-1.29883l-2.9043,-2.78516l0.00586,-0.02148c0.359,-1.533 0.53906,-3.1012 0.53906,-4.6582c0,-8.326 -4.98798,-15.72466 -12.70898,-18.84766l-0.61523,-3.99023c-0.073,-0.489 -0.49328,-0.85156 -0.98828,-0.85156zM19.84375,4.99023h10.3125l0.55469,3.69531c0.053,0.35 0.28528,0.64534 0.61328,0.77734l0.54883,0.22266c6.961,2.816 11.45898,9.48714 11.45898,16.99414c0,1.404 -0.16233,2.81813 -0.48633,4.20312l-0.13477,0.57422c-0.08,0.344 0.0243,0.70522 0.2793,0.94922l2.69531,2.58594l-5.95508,8.41992l-3.33789,-1.68359c-0.318,-0.159 -0.69419,-0.13931 -0.99219,0.05469l-0.49805,0.32031c-2.956,1.902 -6.38034,2.90625 -9.90234,2.90625c-3.521,0 -6.94534,-1.0062 -9.90234,-2.9082l-0.49805,-0.32031c-0.164,-0.105 -0.35301,-0.16016 -0.54101,-0.16016c-0.154,0 -0.31017,0.03542 -0.45117,0.10742l-3.33594,1.68359l-5.95703,-8.42187l2.69531,-2.58594c0.255,-0.244 0.36225,-0.60422 0.28125,-0.94922l-0.13477,-0.57422c-0.324,-1.383 -0.48828,-2.79617 -0.48828,-4.20117c0,-7.507 4.49803,-14.17914 11.45703,-16.99414l0.55078,-0.2207c0.328,-0.133 0.56128,-0.4293 0.61328,-0.7793zM24,9v5.05078c-6.425,0.513 -11.5,5.89422 -11.5,12.44922c0,2.277 0.62241,4.40705 1.69141,6.24805l-3.79883,2.70703l1.16211,1.63086l3.76758,-2.6875c2.294,2.805 5.77873,4.60156 9.67773,4.60156c3.899,0 7.38373,-1.79556 9.67773,-4.60156l3.76758,2.68555l1.16211,-1.62891l-3.79883,-2.70703c1.069,-1.84 1.69141,-3.97105 1.69141,-6.24805c0,-6.555 -5.075,-11.93722 -11.5,-12.44922v-5.05078zM24,16.05078v2.96094h-2.01172l3,5.97656l3,-5.97656h-1.98828v-2.96094c5.322,0.505 9.5,4.99722 9.5,10.44922c0,1.845 -0.48131,3.57889 -1.32031,5.08789l-2.72656,-1.94336l1.1543,-1.61914l-6.60742,-1.02539l3.12695,5.91211l1.16797,-1.63867l2.75195,1.96094c-1.928,2.299 -4.81887,3.76563 -8.04687,3.76563c-3.228,0 -6.11792,-1.46663 -8.04492,-3.76562l2.75195,-1.96094l1.16797,1.63867l3.125,-5.91211l-6.60742,1.02539l1.1543,1.61914l-2.72656,1.94336c-0.839,-1.509 -1.32031,-3.24289 -1.32031,-5.08789c0,-5.453 4.178,-9.94422 9.5,-10.44922z"></path></g></g>
+							</svg>
+					</AboutCard>
+				</div>
+			</div>
+			<h2 class="text-5xl text-center py-10 underline underline-offset-8">Nuestro Servidor</h2>
+			<div class="text-center py-8">
+				<b class="text-3xl">
+					[<span style="color:#6cace4ff">ARG</span>] <span style="color:#FFFFFF">P</span><span style="color:#EAF4FC">r</span><span style="color:#D5E9F9">o</span><span style="color:#C0DEF6">j</span><span style="color:#ABD3F3">e</span><span style="color:#96C8F0">c</span><span style="color:#81BDED">t</span> <span style="color:#6CACE4">S</span><span style="color:#7EB6E7">i</span><span style="color:#90C0EA">r</span><span style="color:#A2CAED">a</span><span style="color:#B4D4F0">c</span><span style="color:#C6DEF3">u</span><span style="color:#D8E8F6">s</span><span style="color:#EAF2F9">a</span>
+						| 
+					<span style="color:#EB6122">1.4.0</span>
+				</b>
+			</div>
+		</section>
+	</main>
+	<!-- <footer class="bg-stone-900 h-fit text-center flex flex-col justify-center shadow-xl shadow-white">
+		<ul class="flex justify-center my-8 gap-8">
+			<li>
+				<a href="https://discord.gg/projectsiracusa" target="_blank"
+					class="inline-flex items-center py-1 px-3 bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-white rounded-md transition duration-300">
+					<svg class="inline-block w-8 h-8 fill-current mr-2" width="24px" height="24px" viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#ffffff" fill-rule="nonzero"> </path> </g> </g></sv>
+					<span class="text-lg">Discord</span>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/@ProjectoFamiliy" target="_blank"
+					class="inline-flex items-center py-1 px-3 bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-white rounded-md transition duration-300">
+					<svg class="w-8 h-8 fill-current mr-2" viewBox="0 0 24 24">
+						<path
+							d="M21.9 5.9c-.2-.7-.7-1.2-1.4-1.4C18.3 4 12 4 12 4s-6.3 0-8.5.5c-.7.2-1.2.7-1.4 1.4C2 8.1 2 12 2 12s0 3.9.5 5.1c.2.7.7 1.2 1.4 1.4 2.2.5 8.5.5 8.5.5s6.3 0 8.5-.5c.7-.2 1.2-.7 1.4-1.4.5-1.2.5-5.1.5-5.1s0-3.9-.5-5.1zM9.5 15.5V8.5l6.5 3z" />
+					</svg>
+					<span class="text-lg">Youtube</span>
+				</a>
+			</li>
+		</ul>
+		<div>
+			<p class="text-lg">Copyright © 2024 | Project Siracusa</p>
+			<p class="">Sitio Web desarrollado por <i>FPD Corporation</i> | Contiene imagenes de <a class="text-cyan-400" href="https://scpslgame.com/">SCP:SL</a></p>
+		</div>
+	</footer> -->
 </Layout>
+
+<style is:inline>
+	@media (min-width: 320px) and (max-width: 425px) {
+		.welcome-buttons {
+			display: grid!important;
+			grid-template-columns: 1fr!important;
+			justify-items: center;
+		}
+		.welcome-buttons > li {
+			width: 210px;
+			text-align: center;
+		}
+		h2 {
+			max-width: 90%;
+			text-decoration: none!important;
+		}
+		.boxes {
+			margin: 0!important;
+		}
+	}
+	@media (max-width: 768px) and (min-width: 320px) {
+		.responsive-grid {
+			grid-template-columns: 1fr;
+		}
+		.grid {
+			justify-items: center
+		}
+		h1 {
+			font-size: 5rem !important;
+		}
+		h3 {
+			font-size: 1.5rem !important;
+		}
+		.gap-16 {
+			gap: 1rem !important;
+		}
+		.underline {
+			text-decoration: solid underline white 2px;
+		}
+	}
+	@media (min-width: 768px) and (max-width: 1024px) {
+		#grid-1 {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr ;
+		}
+		#grid-1 > div {
+			grid-column-start: span 2;
+		}
+		#grid-1 :nth-child(3) {
+			grid-column-start: 2;
+			grid-column-end: span 2;
+		}
+	}
+	@media (min-width: 768px) {
+		.responsive-grid {
+			grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+		}
+	}
+
+	#home {
+		text-decoration-line: underline;
+		text-underline-offset: 8px;
+	}
+</style>

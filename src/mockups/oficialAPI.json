@@ -1,0 +1,93 @@
+{
+    "Success": true,
+    "Cooldown": 10,
+    "Servers": [
+      {
+        "ID": 79921,
+        "Port": 25960,
+        "Online": true,
+        "LastOnline": "2024-12-06",
+        "Players": "17/40",
+        "PlayersList": [
+          {
+            "ID": "76561199805950617@steam",
+            "Nickname": "Sesubiche"
+          },
+          {
+            "ID": "76561199242267971@steam",
+            "Nickname": "hidrogeno(sincontexto)"
+          },
+          {
+            "ID": "76561199509203010@steam",
+            "Nickname": "Silicax"
+          },
+          {
+            "ID": "76561199571480727@steam",
+            "Nickname": "frik1"
+          },
+          {
+            "ID": "76561199376173768@steam",
+            "Nickname": "Francaso92"
+          },
+          {
+            "ID": "76561198932186602@steam",
+            "Nickname": "LukiR"
+          },
+          {
+            "ID": "76561199500595973@steam",
+            "Nickname": "GRIFFITH"
+          },
+          {
+            "ID": "76561199794439682@steam",
+            "Nickname": "joelnicolasx90"
+          },
+          {
+            "ID": "76561199224809311@steam",
+            "Nickname": "\u0444\u0430\u0441\u043e\u043b\u044c"
+          },
+          {
+            "ID": "76561198379765753@steam",
+            "Nickname": "Harry James Potter"
+          },
+          {
+            "ID": "76561199532333915@steam",
+            "Nickname": "Dimian"
+          },
+          {
+            "ID": "76561199116816924@steam",
+            "Nickname": "demitriromano"
+          },
+          {
+            "ID": "76561199245096429@steam",
+            "Nickname": "-\ud83c\udd81-Pollo de batalla"
+          },
+          {
+            "ID": "76561199540660804@steam",
+            "Nickname": "Toto"
+          },
+          {
+            "ID": "76561199394945896@steam",
+            "Nickname": "Felixpunk123"
+          },
+          {
+            "ID": "76561198811807378@steam",
+            "Nickname": "/T34/\u2663POKER\u263c"
+          },
+          {
+            "ID": "76561199747929973@steam",
+            "Nickname": "SpiderPx"
+          }
+        ],
+        "Info": "PGI+PHNpemU9MTgwPjxjb2xvcj0jNjZmZmIzPltMPC9jb2xvcj48Y29sb3I9IzgwZmZiZj5BPC9jb2xvcj48Y29sb3I9Izk5ZmZjYz5UPC9jb2xvcj48Y29sb3I9I2IzZmZkOT5BPC9jb2xvcj48Y29sb3I9I2NjZmZlNj5NXTwvY29sb3I+PC9zaXplPiAgIDxzaXplPTE2MD48Y29sb3I9I0ZGRkZGRj5QPC9jb2xvcj48Y29sb3I9I0VBRjRGQz5yPC9jb2xvcj48Y29sb3I9I0Q1RTlGOT5vPC9jb2xvcj48Y29sb3I9I0MwREVGNj5qPC9jb2xvcj48Y29sb3I9I0FCRDNGMz5lPC9jb2xvcj48Y29sb3I9Izk2QzhGMD5jPC9jb2xvcj48Y29sb3I9IzgxQkRFRD50PC9jb2xvcj4gPGNvbG9yPSM2Q0FDRTQ+UzwvY29sb3I+PGNvbG9yPSM3RUI2RTc+aTwvY29sb3I+PGNvbG9yPSM5MEMwRUE+cjwvY29sb3I+PGNvbG9yPSNBMkNBRUQ+YTwvY29sb3I+PGNvbG9yPSNCNEQ0RjA+YzwvY29sb3I+PGNvbG9yPSNDNkRFRjM+dTwvY29sb3I+PGNvbG9yPSNEOEU4RjY+czwvY29sb3I+PGNvbG9yPSNFQUYyRjk+YTwvY29sb3I+PC9zaXplPiA8c2l6ZT04MD4gfCA8Y29sb3I9I0I0M0E5Mj4xPC9jb2xvcj48Y29sb3I9I0I2MkU3NT4uPC9jb2xvcj48Y29sb3I9I0MyMkI2Nj40PC9jb2xvcj48Y29sb3I9I0QyMjc1Mj4uPC9jb2xvcj48Y29sb3I9I0U2MjIzQT4wPC9jb2xvcj48L3NpemU+PC9iPiA=",
+        "Version": "13.5.1",
+        "Pastebin": "VqtscWVz",
+        "FF": true,
+        "WL": false,
+        "Modded": true,
+        "Mods": 0,
+        "Suppress": 0,
+        "AutoSuppress": false
+      }
+    ]
+  }
+  

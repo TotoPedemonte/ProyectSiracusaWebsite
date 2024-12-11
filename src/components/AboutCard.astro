@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	title: string;
+    description: string;
+}
+
+const { title, description} = Astro.props;
+---
+
+<div class="box border max-w-lg p-6 pt-4 shadow-lg text-cyan-50">
+    <slot />
+    <h2 class="text-2xl font-extrabold mb-4">{title}</h2>
+    <p class="text-m">{description}</p>
+</div>

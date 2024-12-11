@@ -1,0 +1,139 @@
+---
+import Image from "astro/components/Image.astro";
+import logo from "/public/logo.svg";
+---
+
+<header class="w-full h-auto absolute py-2 flex flex-col items-center z-10 px-8">
+    <nav class="max-w-screen-2xl w-full h-auto flex justify-between items-center">
+        <a href="/">
+            <Image
+                src={logo}
+                alt={"Project Siracusa"}
+                width={70}
+                height={0}
+            />
+        </a>
+    
+        <div id="menuTransition" class="flex justify-center items-center">
+            <button class="p-2 z-50">
+                <!-- Icono de hamburguesa SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" id="hamburguer" class="w-10 h-10 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+    
+                <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 z-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <ul id="menu" class="min-w-64 sm-hidden h-full flex items-center gap-8 text-xl">
+                <li>
+                    <a id="home" href="/">Home</a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/projectsiracusa" target="_blank">Discord</a>
+                </li>
+                <li><s class="decoration-red-500 decoration-4">Plugins</s></li>
+                <li><a id="dashboard" href="/dashboard">Server Dashboard</a></li>
+                <li class="bg-red-500 rounded-md hover:opacity-80 transition-opacity pointer">
+                <a href="https://www.patreon.com/projectsiracusa/shop" target="_blank" class="flex items-center gap-2 px-3 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-patreon">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M7.462 3.1c2.615 -1.268 6.226 -1.446 9.063 -.503c2.568 .853 4.471 3.175 4.475 5.81c.004 3.061 -1.942 5.492 -4.896 6.243c-1.693 .43 -2.338 .75 -2.942 1.582c-.238 .328 -.45 .745 -.796 1.533l-.22 .5c-1.146 2.601 -2.156 3.762 -4.236 3.735c-2.232 -.03 -3.603 -1.742 -4.313 -4.48c-.458 -1.768 -.617 -3.808 -.594 -5.876c.044 -3.993 1.42 -7.072 4.46 -8.545z"></path>
+                    </svg>
+                    <span id="donate">Donar en Patreon</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<script>
+    document.getElementById('hamburguer').addEventListener('click', () => {
+        document.getElementById('menu').classList.toggle('sm-hidden');
+        document.getElementById('menu').classList.toggle('growMenu');
+        document.getElementById('hamburguer').classList.toggle('sm-hidden');
+        document.getElementById('closeIcon').classList.toggle('closeIcon-change');
+    });
+    document.getElementById('closeIcon').addEventListener('click', () => {
+        document.getElementById('menu').classList.toggle('sm-hidden');
+        document.getElementById('menu').classList.toggle('growMenu');
+        document.getElementById('hamburguer').classList.toggle('sm-hidden');
+        document.getElementById('closeIcon').classList.toggle('closeIcon-change');
+    });
+</script>
+  
+<style is:inline>
+    @media (max-width: 767px) and (min-width: 320px) {
+        #donate {
+            display: inline;
+        }
+        #menu {
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #menu {
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+
+            height: 0;
+            opacity: 0;
+
+            width: 40%;
+            background-color: rgba(36, 36, 36, 0.98);
+            border: 0;
+            z-index: 10;
+            padding: 10px;
+            justify-content: center;
+            transition: all 0.3s ease-in-out;
+            padding-bottom: 0;
+        }
+        #menu li{
+            text-align: center;
+        }
+        .growMenu {
+            height: 70vh!important;
+            opacity: 1!important;
+        }
+        #donate {
+            display: inline;
+        }
+        .sm-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        #hamburguer {
+            display: block;
+        }
+        #closeIcon {
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            height: 0px;
+            cursor: pointer;
+        }
+        .closeIcon-change {
+            top: 10px!important;
+            right: 10px!important;
+            height: 40px!important;
+            opacity: 1!important;
+        }
+    }
+
+    @media (min-width: 769px) {
+        #closeIcon {
+            display: none;
+        }
+    }
+</style>
