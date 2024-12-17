@@ -53,17 +53,17 @@ import logo from "/public/logo.svg";
 </header>
 
 <script>
-    document.getElementById('hamburguer').addEventListener('click', () => {
-        document.getElementById('menu').classList.toggle('sm-hidden');
-        document.getElementById('menu').classList.toggle('growMenu');
-        document.getElementById('hamburguer').classList.toggle('sm-hidden');
-        document.getElementById('closeIcon').classList.toggle('closeIcon-change');
+    document.getElementById('hamburguer')?.addEventListener('click', () => {
+        document.getElementById('menu')?.classList.toggle('sm-hidden');
+        document.getElementById('menu')?.classList.toggle('growMenu');
+        document.getElementById('hamburguer')?.classList.toggle('sm-hidden');
+        document.getElementById('closeIcon')?.classList.toggle('closeIcon-change');
     });
-    document.getElementById('closeIcon').addEventListener('click', () => {
-        document.getElementById('menu').classList.toggle('sm-hidden');
-        document.getElementById('menu').classList.toggle('growMenu');
-        document.getElementById('hamburguer').classList.toggle('sm-hidden');
-        document.getElementById('closeIcon').classList.toggle('closeIcon-change');
+    document.getElementById('closeIcon')?.addEventListener('click', () => {
+        document.getElementById('menu')?.classList.toggle('sm-hidden');
+        document.getElementById('menu')?.classList.toggle('growMenu');
+        document.getElementById('hamburguer')?.classList.toggle('sm-hidden');
+        document.getElementById('closeIcon')?.classList.toggle('closeIcon-change');
     });
 </script>
   

@@ -3,15 +3,17 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 export const prerender = false;
 
-// const data = await fetch('https://api.scpslgame.com/serverinfo.php?id=28739&key=QnhHbfOwIuGtc9xx5L5EZFP8&lo=true&players=true&list=true&info=true&pastebin=true&version=true&flags=true&nicknames=true&online=true').then(async (response) =>
-//   response.json()
-// );
-
-// const serverInfo = await data.Servers && data.Servers.length > 0 
-//   ? data.Servers[0] 
-//   : null;
-
-// console.log(serverInfo);
+const fetchOficialData = async () => {
+  try {
+    const res = await fetch(`https://api.scpslgame.com/serverinfo.php?id=28739&key=QnhHbfOwIuGtc9xx5L5EZFP8&lo=true&players=true&list=true&info=true&pastebin=true&version=true&flags=true&nicknames=true&online=true`);
+    const json = await res.json();
+    return json;
+  } catch (error) {
+    console.error(error);
+  }
+};
+const serverInfo = await fetchOficialData();
+const playerList = await serverInfo?.Servers[0]?.PlayersList;
 
 const SERVER_ID = "79921"
 const fetchServerData = async () => {
@@ -28,8 +30,8 @@ const data = await fetchServerData();
 
 <Layout title="Dashboard">
   <Header />
-  <main class="overflow-x-hidden w-full h-screen flex items-center justify-center shadow-sm">
-    <div class="flex flex-col items-center justify-center h-screen gap-8">
+  <main class="overflow-x-hidden w-full flex flex-col items-center justify-center shadow-sm min-h-screen gap-24">
+    <section class="flex flex-col items-center justify-center gap-8 mt-48">
       <h1 class="text-6xl font-sans" set:html={data.info}></h1>
       <div class="flex flex-col gap-2 w-full">
         <p class="flex justify-between">
@@ -47,7 +49,17 @@ const data = await fetchServerData();
           Servidores Hosteados en Argentina, Buenos Aires
         </p>
       </div>
-    </div>
+    </section>
+    <section class="bg-stone-950 rounded-lg mb-24">
+      <h2 class="text-center text-3xl py-4"><i>Online Players</i></h2>
+      <ul class="grid grid-cols-4 gap-4 text-center bg-zinc-900">
+        {
+          playerList.map((player: any) => (
+            <li class="p-4">{player.Nickname}</li>
+          ))
+        }
+      </ul>
+    </section>
   </main>
 
   <div id="alert" class="fixed bottom-12 left-1/2 -translate-x-1/2 rounded-md flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3 transition transform opacity-0 scale-75" role="alert">
